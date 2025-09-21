@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Animation</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      background-color: black;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+   #text {
+  font-size: 3em;
+  letter-spacing: 3px;
+  font-family: monospace;
+  color: #38bdf8;
+  overflow: hidden; 
+  border-right: 3px solid #38bdf8; 
+  width: 0; 
+  animation: typing 2s steps(34) forwards, blink 0.7s infinite;
+  white-space: nowrap;
+}
+
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 35ch }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p id="text">Welcome to the portfolio of... </p>
+  </div>
+  <script>
+    setTimeout(()=>{
+      window.location.href="page2.html";
+    },3000)
+  </script>
+</body>
+</html>
